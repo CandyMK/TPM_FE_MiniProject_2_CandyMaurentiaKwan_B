@@ -1,0 +1,158 @@
+body {
+  font-family: "Inter", serif;
+  background-color: #EEEEF0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  padding: 25px;
+  border-radius: 8px;
+}
+
+.container h1 {
+  font-size: 32px;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 5px;
+  color:#000000;
+}
+
+.container p {
+  font-size: 14px;
+  line-height: 200%;
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #000000;
+}
+
+#task-form {
+  display: flex;
+  margin: 0;
+}
+
+#task-input {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  border: 1px solid #DEDEDE ;
+  border-radius: 4px;
+  outline: none;
+}
+
+#task-form button {
+  background-color: #5016FF;
+  border: none;
+  color: white;
+  font-size: 14px;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-left: 10px;
+}
+
+.task-box {
+  background-color: #EEEEF0;
+  margin-top: 10px;
+  padding: 15px;
+  border-radius: 4px;
+  display: none;
+}
+
+#task-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.task-container {
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 4px;
+  margin-bottom: 15px; 
+}
+
+.task:last-child {
+  margin-bottom: 0;
+}
+
+.custom-checkbox {
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+  margin-right: 5px;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #ffffff;
+  border: 1px solid #DEDEDE ;
+  border-radius: 4px;
+  display: inline-block;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  position: relative;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #5016FF;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  content: "";
+  width: 18px;
+  height: 18px;
+  background-image: url("assets/check.png");
+  background-size: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.task-title {
+  flex: 1;
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+}
+
+.delete-btn img {
+  width: 18px;
+  height: 18px;
+}
+
+.delete-btn:hover img {
+  transform: scale(1.1);
+}
